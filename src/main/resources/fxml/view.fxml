@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="552.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+    <children>
+        <TextField fx:id="resultDisplay" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="50.0" prefHeight="50.0" prefWidth="328.0" style="-fx-border-radius: 4px;">
+            <font>
+                <Font size="18.0" />
+            </font></TextField>
+        <GridPane layoutY="150.0" prefHeight="280.0" prefWidth="352.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #424242; -fx-background-radius: 50%;" text="AC" textFill="WHITE">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="squarerootButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #424242; -fx-background-radius: 50%;" text="√" textFill="WHITE" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="squareButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #424242; -fx-background-radius: 50%;" text="x²" textFill="WHITE" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="divideButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #663c00; -fx-background-radius: 50%;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="eightButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="sevenButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="nineButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="multiplyButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #663c00; -fx-background-radius: 50%;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="fourButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="oneButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="fiveButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="sixButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="subtractButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #663c00; -fx-background-radius: 50%;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="twoButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="threeButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="addButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #663c00; -fx-background-radius: 50%;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+            </children>
+        </GridPane>
+        <GridPane layoutY="430.0" prefHeight="70.0" prefWidth="176.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="zeroButton" alignment="CENTER" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="148.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="0" textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+            </children>
+        </GridPane>
+        <GridPane layoutX="176.0" layoutY="430.0" prefHeight="70.0" prefWidth="176.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="dotButton" mnemonicParsing="false" onAction="#processNumpad" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #141414; -fx-background-radius: 50%;" text="." textFill="WHITE">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="equalButton" mnemonicParsing="false" onAction="#calculate" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #663c00; -fx-background-radius: 50%;" text="=" textFill="WHITE" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Times New Roman" size="18.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="14.0" right="14.0" top="5.0" />
+                    </GridPane.margin>
+                </Button>
+            </children>
+        </GridPane>
+        <TextArea fx:id="history" layoutX="366.0" layoutY="50.0" nodeOrientation="RIGHT_TO_LEFT" onDragDetected="#calculate" prefHeight="350.0" prefWidth="172.0" wrapText="true">
+            <font>
+                <Font name="Times New Roman" size="13.0" />
+            </font>
+        </TextArea>
+    </children>
+</Pane>
